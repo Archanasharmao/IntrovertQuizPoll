@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, hwb(163 63% 15%), #e2c6ef);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.container, .login-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    margin-top: 1%;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.question.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    color: #333;
+    transition: background 0.3s;
+}
+
+.custom-radio:hover {
+    background: #e0e0e0;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-radio .radio-btn {
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border: 2px solid #3b3663;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.custom-radio input:checked + .radio-btn {
+    background: #eda6e0;
+    border-color: #3b3663;
+}
+
+.custom-radio input:checked + .radio-btn::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #bfb95f;
+    border-radius: 50%;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #c4a8cd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a1c1c6;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#resultText {
+    color: #333;
+}
+
+.left-image {
+    /* margin-right: 20%; Adjust margin as needed */
+      width: 80%; /* Set the desired width */
+     height: 100%; /* Maintain aspect ratio */
+      /* max-width: 100%; Ensure it doesn't overflow its container */  
+} 
